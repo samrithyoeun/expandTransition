@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,82 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byA-AT-vhN">
+                                <rect key="frame" x="132" y="94" width="150" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="CRg-ig-ex6"/>
+                                    <constraint firstAttribute="height" constant="50" id="Ykg-t1-V8b"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="N8B-cA-mUL" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="8fE-tN-DTt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="byA-AT-vhN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AqH-Pv-zmL"/>
+                            <constraint firstItem="byA-AT-vhN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="NPS-sQ-j6B"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="36" y="57"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5lY-Vv-jY3">
+            <objects>
+                <viewController id="N8B-cA-mUL" customClass="ViewController" customModule="customSegue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hoY-HB-MYS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipr-Tf-u2Z">
+                                <rect key="frame" x="132" y="74" width="150" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="40" id="cgR-UG-U1b"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44n-f9-0um">
+                                <rect key="frame" x="330" y="465" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="N8B-cA-mUL" eventType="touchUpInside" id="pDj-JL-kAE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ipr-Tf-u2Z" firstAttribute="top" secondItem="iFi-ga-huN" secondAttribute="top" constant="30" id="00O-FE-Kba"/>
+                            <constraint firstItem="ipr-Tf-u2Z" firstAttribute="leading" secondItem="iFi-ga-huN" secondAttribute="leading" constant="132" id="Ggb-vH-brL"/>
+                            <constraint firstItem="iFi-ga-huN" firstAttribute="bottom" secondItem="ipr-Tf-u2Z" secondAttribute="bottom" constant="748" id="PSd-Wx-Ec8"/>
+                            <constraint firstItem="iFi-ga-huN" firstAttribute="trailing" secondItem="ipr-Tf-u2Z" secondAttribute="trailing" constant="132" id="lDg-E0-a32"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iFi-ga-huN"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="ipr-Tf-u2Z" id="eCJ-sk-9j3"/>
+                        <outlet property="buttonHeight" destination="cgR-UG-U1b" id="tNQ-Eo-82q"/>
+                        <outlet property="buttonLeading" destination="Ggb-vH-brL" id="fMi-eH-Wn5"/>
+                        <outlet property="buttonTrailing" destination="lDg-E0-a32" id="mJI-oD-cuv"/>
+                        <outlet property="buttonbottomContraint" destination="PSd-Wx-Ec8" id="fnD-jQ-Hlo"/>
+                        <outlet property="dismissButton" destination="44n-f9-0um" id="mom-Rw-PIi"/>
+                        <outlet property="topConstant" destination="00O-FE-Kba" id="Ies-Ny-ZZk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E92-TR-kap" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="57"/>
         </scene>
     </scenes>
 </document>

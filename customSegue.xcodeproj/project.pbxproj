@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		725725D7A9499A1EC549FCEF /* Pods_customSegue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA741CB6D886A9A914A196C2 /* Pods_customSegue.framework */; };
 		ABD7665923179BBB0057347F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7665823179BBB0057347F /* AppDelegate.swift */; };
 		ABD7665B23179BBB0057347F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD7665A23179BBB0057347F /* ViewController.swift */; };
 		ABD7665E23179BBB0057347F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD7665C23179BBB0057347F /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E898D249072A6FA62443D34 /* Pods-customSegue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-customSegue.release.xcconfig"; path = "Target Support Files/Pods-customSegue/Pods-customSegue.release.xcconfig"; sourceTree = "<group>"; };
+		47887F5A30925073EC89E6A1 /* Pods-customSegue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-customSegue.debug.xcconfig"; path = "Target Support Files/Pods-customSegue/Pods-customSegue.debug.xcconfig"; sourceTree = "<group>"; };
 		ABD7665523179BBB0057347F /* customSegue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = customSegue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD7665823179BBB0057347F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABD7665A23179BBB0057347F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		ABD7665F23179BC60057347F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABD7666223179BC60057347F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABD7666423179BC60057347F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA741CB6D886A9A914A196C2 /* Pods_customSegue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_customSegue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				725725D7A9499A1EC549FCEF /* Pods_customSegue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37EAECAB437B5DA954763F88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47887F5A30925073EC89E6A1 /* Pods-customSegue.debug.xcconfig */,
+				2E898D249072A6FA62443D34 /* Pods-customSegue.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		86BE027F2055682D758CB014 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA741CB6D886A9A914A196C2 /* Pods_customSegue.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ABD7664C23179BBB0057347F = {
 			isa = PBXGroup;
 			children = (
 				ABD7665723179BBB0057347F /* customSegue */,
 				ABD7665623179BBB0057347F /* Products */,
+				37EAECAB437B5DA954763F88 /* Pods */,
+				86BE027F2055682D758CB014 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABD7666723179BC60057347F /* Build configuration list for PBXNativeTarget "customSegue" */;
 			buildPhases = (
+				4AA9AC0E5377A1E94D5D5F58 /* [CP] Check Pods Manifest.lock */,
 				ABD7665123179BBB0057347F /* Sources */,
 				ABD7665223179BBB0057347F /* Frameworks */,
 				ABD7665323179BBB0057347F /* Resources */,
+				45A2EF35F16B7B3D977C423D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45A2EF35F16B7B3D977C423D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-customSegue/Pods-customSegue-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-customSegue/Pods-customSegue-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-customSegue/Pods-customSegue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AA9AC0E5377A1E94D5D5F58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-customSegue-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ABD7665123179BBB0057347F /* Sources */ = {
@@ -280,6 +349,7 @@
 		};
 		ABD7666823179BC60057347F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47887F5A30925073EC89E6A1 /* Pods-customSegue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +368,7 @@
 		};
 		ABD7666923179BC60057347F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E898D249072A6FA62443D34 /* Pods-customSegue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
